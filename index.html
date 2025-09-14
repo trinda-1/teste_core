@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Estudos v2 - Fiscal CORE-SE</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px; /* Aumentei a largura para a nova coluna */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #005a9c;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        /* Estilos da barra de progresso */
+        .progress-container { margin-bottom: 30px; }
+        #progressText { font-size: 1.2em; font-weight: 600; text-align: center; margin-bottom: 10px; color: #333; }
+        .progress-bar { width: 100%; background-color: #e0e0e0; border-radius: 25px; height: 25px; overflow: hidden; }
+        #progressBar { height: 100%; width: 0%; background: linear-gradient(90deg, #007bff, #0056b3); border-radius: 25px; transition: width 0.4s ease-in-out; }
+        
+        /* Estilos das seções e tabelas */
+        details { margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        summary { font-size: 1.3em; font-weight: 600; padding: 15px; background-color: #f8f9fa; cursor: pointer; outline: none; border-radius: 8px 8px 0 0; color: #005a9c; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 15px; border-bottom: 1px solid #e0e0e0; text-align: left; vertical-align: middle; }
+        th:last-child, td:last-child { text-align: center; } /* Centraliza a coluna de data */
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background-color: #f1f8ff; }
+        td:first-child { width: 50px; text-align: center; }
+        input[type="checkbox"] { transform: scale(1.5); cursor: pointer; }
+        
+        /* NOVO: Estilo para a data de conclusão */
+        .completion-date {
+            font-size: 0.85em;
+            color: #555;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        /* Estilos para a seção de Backup */
+        .backup-section { margin-top: 40px; padding: 20px; border: 1px dashed #007bff; border-radius: 8px; background-color: #f8f9fa;}
+        .backup-section h3 { margin-top: 0; color: #005a9c; }
+        .backup-section textarea { width: 100%; height: 80px; margin-top: 10px; padding: 10px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc; }
+        .backup-section button { background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 1em; margin-right: 10px; margin-top: 10px; }
+        .backup-section button:hover { background-color: #0056b3; }
+        .import-group { margin-top: 20px; }
+
+        .footer { text-align: center; margin-top: 30px; font-size: 0.9em; color: #888; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Plano de Estudos v2 - Fiscal CORE-SE</h1>
+
+        <div class="progress-container">
+            <p id="progressText">Progresso Total: 0%</p>
+            <div class="progress-bar"><div id="progressBar"></div></div>
+        </div>
+
+        <details open><summary>✅ Conhecimentos Básicos</summary>
+            <table>
+                <tr><th>Status</th><th>Disciplina</th><th>Conteúdo</th><th>Concluído em</th></tr>
+                <tr><td><input type="checkbox" id="item-1"></td><td>Português</td><td>Compreensão e interpretação de textos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-2"></td><td>Português</td><td>Reconhecimento de tipos e gêneros textuais</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-3"></td><td>Português</td><td>Domínio da ortografia oficial</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-4"></td><td>Português</td><td>Coesão textual e Conectivos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-5"></td><td>Português</td><td>Morfossintaxe (classes de palavras, pontuação)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-6"></td><td>Português</td><td>Concordância e Regência (verbal e nominal)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-7"></td><td>Português</td><td>Crase e Colocação Pronominal</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-8"></td><td>RLM</td><td>Operações, propriedades e aplicações</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-9"></td><td>RLM</td><td>Princípios de contagem e probabilidade</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-10"></td><td>RLM</td><td>Arranjos, permutações e combinações</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-11"></td><td>RLM</td><td>Conjuntos numéricos e operações</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-12"></td><td>RLM</td><td>Razões e proporções (Regra de 3, %)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-13"></td><td>RLM</td><td>Compreensão de estruturas lógicas</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-14"></td><td>RLM</td><td>Lógica de argumentação e Diagramas lógicos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-15"></td><td>Informática</td><td>Hardware, Software, Periféricos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-16"></td><td>Informática</td><td>Microsoft Office (Word, Excel)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-17"></td><td>Informática</td><td>Sistema Operacional (Windows 10/11)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-18"></td><td>Informática</td><td>Redes: Internet e intranet</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-19"></td><td>Informática</td><td>Navegadores (Firefox, Chrome) e Correio (Outlook)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-20"></td><td>Informática</td><td>Segurança da Informação (Vírus, Backup, Firewall)</td><td class="completion-date"></td></tr>
+            </table>
+        </details>
+        <details><summary>✅ Conhecimentos Complementares</summary>
+            <table>
+                <tr><th>Status</th><th>Disciplina</th><th>Conteúdo</th><th>Concluído em</th></tr>
+                <tr><td><input type="checkbox" id="item-21"></td><td>Leg. e Ética</td><td>Ética e função pública. Ética no Setor Público</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-22"></td><td>Leg. e Ética</td><td>Lei nº 8.429/1992 (Improbidade Administrativa)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-23"></td><td>Leg. e Ética</td><td>Lei nº 9.784/1999 (Processo Administrativo)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-24"></td><td>Leg. e Ética</td><td>Lei nº 12.527/2011 (Acesso à Informação)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-25"></td><td>Leg. e Ética</td><td>Lei nº 13.709/2018 (LGPD)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-26"></td><td>Atualidades</td><td>Tópicos de Política, Economia, Sociedade, etc.</td><td class="completion-date"></td></tr>
+            </table>
+        </details>
+        <details><summary>✅ Conhecimentos Específicos (Fiscal)</summary>
+            <table>
+                <tr><th>Status</th><th>Disciplina</th><th>Conteúdo</th><th>Concluído em</th></tr>
+                <tr><td><input type="checkbox" id="item-27"></td><td>Dir. Admin.</td><td>Organização Administrativa</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-28"></td><td>Dir. Admin.</td><td>Ato Administrativo</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-29"></td><td>Dir. Admin.</td><td>Agentes Públicos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-30"></td><td>Dir. Admin.</td><td>Poderes Administrativos e de Polícia</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-31"></td><td>Dir. Admin.</td><td>Licitação e Contratos Administrativos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-32"></td><td>Dir. Admin.</td><td>Controle da Administração Pública</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-33"></td><td>Dir. Admin.</td><td>Responsabilidade Civil do Estado</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-34"></td><td>Dir. Admin.</td><td>Regime Jurídico-Administrativo (Princípios)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-35"></td><td>Arquivologia</td><td>Conceitos fundamentais e gestão de documentos</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-36"></td><td>Funções Adm.</td><td>Planejamento, organização, direção e controle</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-37"></td><td>Atendimento</td><td>Qualidade no atendimento ao público e Redação Oficial</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-38"></td><td>Leg. Espec.</td><td>Lei Federal nº 4.886/1965 (Principal!)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-39"></td><td>Leg. Espec.</td><td>Lei Federal nº 6.839/1980</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-40"></td><td>Leg. Espec.</td><td>Código Civil (arts. 710 a 721)</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-41"></td><td>Leg. Espec.</td><td>Código de Ética e Disciplina dos Rep. Comerciais</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-42"></td><td>Leg. Espec.</td><td>Resolução CONFERE nº 1063/2015</td><td class="completion-date"></td></tr>
+                <tr><td><input type="checkbox" id="item-43"></td><td>Leg. Espec.</td><td>Resolução CONFERE nº 1.130/2019</td><td class="completion-date"></td></tr>
+            </table>
+        </details>
+        
+        <div class="backup-section">
+             <h3>🛡️ Backup do Progresso</h3>
+             <p>Use periodicamente para salvar seu progresso em um arquivo de texto seguro.</p>
+             <button id="exportBtn">Exportar Progresso</button>
+             <textarea id="backupData" readonly placeholder="Clique em 'Exportar' para gerar seu código de backup aqui..."></textarea>
+             <div class="import-group">
+                  <p>Para restaurar, cole seu código de backup abaixo:</p>
+                  <textarea id="importData" placeholder="Cole seu código de backup aqui..."></textarea>
+                  <button id="importBtn">Importar Progresso</button>
+             </div>
+        </div>
+
+        <p class="footer">Seu progresso é salvo automaticamente no navegador.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const exportBtn = document.getElementById('exportBtn');
+            const importBtn = document.getElementById('importBtn');
+            const backupDataTextarea = document.getElementById('backupData');
+            const importDataTextarea = document.getElementById('importData');
+            const totalItems = checkboxes.length;
+
+            function updateProgress() {
+                const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked').length;
+                const percentage = totalItems > 0 ? (checkedItems / totalItems) * 100 : 0;
+                progressBar.style.width = percentage + '%';
+                progressText.textContent = `Progresso Total: ${Math.round(percentage)}% (${checkedItems}/${totalItems})`;
+            }
+
+            // NOVO: Função para salvar o estado e a data
+            function saveProgress(checkbox) {
+                const dateCell = checkbox.closest('tr').querySelector('.completion-date');
+                let dataToSave;
+
+                if (checkbox.checked) {
+                    const now = new Date();
+                    // Formata a data para o padrão brasileiro
+                    const timestamp = now.toLocaleString('pt-BR', { 
+                        day: '2-digit', 
+                        month: '2-digit', 
+                        year: 'numeric', 
+                        hour: '2-digit', 
+                        minute: '2-digit' 
+                    });
+                    dateCell.textContent = timestamp;
+                    dataToSave = { checked: true, timestamp: timestamp };
+                } else {
+                    dateCell.textContent = '';
+                    dataToSave = { checked: false, timestamp: null };
+                }
+                
+                localStorage.setItem(checkbox.id, JSON.stringify(dataToSave));
+            }
+
+            // NOVO: Função para carregar o estado e a data
+            function loadProgress() {
+                checkboxes.forEach(checkbox => {
+                    const savedData = localStorage.getItem(checkbox.id);
+                    if (savedData) {
+                        const data = JSON.parse(savedData);
+                        checkbox.checked = data.checked;
+                        const dateCell = checkbox.closest('tr').querySelector('.completion-date');
+                        if (data.checked && data.timestamp) {
+                            dateCell.textContent = data.timestamp;
+                        }
+                    }
+                });
+            }
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    saveProgress(checkbox);
+                    updateProgress();
+                });
+            });
+
+            exportBtn.addEventListener('click', () => {
+                const progressData = {};
+                checkboxes.forEach(checkbox => {
+                    const savedItem = localStorage.getItem(checkbox.id);
+                    if (savedItem) {
+                        progressData[checkbox.id] = JSON.parse(savedItem);
+                    }
+                });
+                const backupJson = JSON.stringify(progressData, null, 2); // Formata para melhor leitura
+                backupDataTextarea.value = backupJson;
+                navigator.clipboard.writeText(backupJson).then(() => {
+                    alert('Código de backup copiado para a área de transferência! Cole em um arquivo de texto para salvar.');
+                }).catch(() => {
+                    alert('Código gerado. Copie o texto da caixa manualmente.');
+                });
+            });
+
+            importBtn.addEventListener('click', () => {
+                const backupJson = importDataTextarea.value.trim();
+                if (!backupJson) {
+                    alert('Por favor, cole seu código de backup na caixa de texto.');
+                    return;
+                }
+                try {
+                    const progressData = JSON.parse(backupJson);
+                    Object.keys(progressData).forEach(id => {
+                        localStorage.setItem(id, JSON.stringify(progressData[id]));
+                    });
+                    alert('Progresso importado com sucesso! A página será recarregada.');
+                    location.reload();
+                } catch (error) {
+                    alert('Erro ao importar. O código de backup parece ser inválido.');
+                }
+            });
+
+            loadProgress();
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
