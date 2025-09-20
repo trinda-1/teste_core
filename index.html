@@ -336,7 +336,7 @@
             if (e.target.matches('input[type="checkbox"]')) { saveItemState(e.target); updateProgress(); }
             if (e.target.matches('.star-checkbox')) { savePriorityState(e.target); }
         });
-        const calendarMonthYear = document.getElementById('calendarMonthYear'), calendarDays = document.getElementById('calendarDays'), today = new Date(2025, 8, 14);
+        const calendarMonthYear = document.getElementById('calendarMonthYear'), calendarDays = document.getElementById('calendarDays'), today = new Date();
         let currentMonth = today.getMonth(), currentYear = today.getFullYear();
         const editalEvents = { 
             '2025-09-22': { text: 'Fim do período de inscrição', icon: '🚩' }, 
@@ -444,3 +444,4 @@
     </script>
 </body>
 </html>
+
